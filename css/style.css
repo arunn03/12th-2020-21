@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  background: #F2F2F2;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  text-align: center;
+  padding: 0;
+  color: white;
+}
+section .container {
+  padding-bottom: 3em;
+}
+section .container .left-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  padding: 0.7em 0;
+  margin: 0;
+}
+
+input {
+  border-radius: 5px;
+  width: 5em;
+  height: 20px;
+  border: none;
+  box-shadow: 0 3px 10px black;
+}
+
+input:focus {
+  outline-color: #007AF3;
+}
+
+li {
+  margin: 0.7em 0.3em;
+}
+
+img {
+  display: none;
+  max-width: 400px;
+}
+
+marquee {
+  background: #F2F2F2;
+  color: #FB3640;
+}
+
+button {
+  margin-bottom: 2em;
+  color: white;
+  background: #007AF3;
+  border: none;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 20px;
+  padding: 0.7em 1.3em;
+  cursor: pointer;
+}
+
+h1.res {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.hero {
+  padding: 5em 2em;
+}
+.hero .container1 .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: grey;
+  letter-spacing: 0.3em;
+}
+.hero .container1 h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+.hero .container1 h1 .covid {
+  color: #DD7373;
+}
+.hero .container1 h1 .batch {
+  color: #3B3561;
+}
+
+.tenth-sec {
+  background: #2A2B2A;
+}
+
+.eleventh-sec {
+  background: #FF8966;
+}
+
+.twelfth-sec {
+  background: #E5446D;
+}
+
+.result {
+  background: #E5446D;
+  height: 90vh;
+  font-weight: bold;
+  font-size: x-large;
+}
+.result .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background: #332E3C;
+  padding: 0.7em 3em;
+}
+.footer p {
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  img {
+    display: block;
+    width: 40%;
+    margin-top: 3em;
+    padding: 0 2em;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    place-content: space-between;
+    padding: 2em 20em;
+  }
+  .container img {
+    margin-top: -0.3em;
+    border-radius: 20%;
+  }
+
+  .container1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .container1 img {
+    margin-top: -1em;
+    width: 25%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th Results</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="result" id="output">
+        <h1 class="res">12th Result</h1>
+        <div class="container">
+            <ul class="res-subs">
+                <li>Language:</li>
+                <li>English:</li>
+                <li>Subject3:</li>
+                <li>Subject4:</li>
+                <li>Subject5:</li>
+                <li>Subject6:</li>
+            </ul>
+            <ul class="res-marks">
+                <li class="lang"></li>
+                <li class="eng"></li>
+                <li class="sub3"></li>
+                <li class="sub4"></li>
+                <li class="sub5"></li>
+                <li class="sub6"></li>
+            </ul>
+        </div>
+        <!-- <button class="back" onclick="go_back()">Back</button> -->
+    </section>
+
+    <section class="footer">
+        <p>
+            Created by - Arunkumar.S
+        </p>
+        <p>
+            Ph.no: +91 86670 99336, Mail id: iamsarunn03@gmail.com
+        </p>
+    </section>
+
+    <script type="text/javascript">
+        var queryString = new Array()
+        window.onload = function () {
+            document.querySelector(".lang").innerHTML = "Loading..."
+            document.querySelector(".eng").innerHTML = "Loading..."
+            document.querySelector(".sub3").innerHTML = "Loading..."
+            document.querySelector(".sub4").innerHTML = "Loading..."
+            document.querySelector(".sub5").innerHTML = "Loading..."
+            document.querySelector(".sub6").innerHTML = "Loading..."
+            if (queryString.length == 0) {
+                if (window.location.search.split('?').length > 1) {
+                    var params = window.location.search.split('?')[1].split('&')
+                    for (var i = 0; i < params.length; i++) {
+                        var key = params[i].split('=')[0]
+                        var value = decodeURIComponent(params[i].split('=')[1])
+                        queryString[key] = value
+                    }
+                }
+            }
+            calculate()
+        }
+        function calculate() {
+
+            document.querySelector(".lang").innerHTML = queryString["l"]
+            document.querySelector(".eng").innerHTML = queryString["e"]
+            document.querySelector(".sub3").innerHTML = queryString["3"]
+            document.querySelector(".sub4").innerHTML = queryString["4"]
+            document.querySelector(".sub5").innerHTML = queryString["5"]
+            document.querySelector(".sub6").innerHTML = queryString["6"]
+        }
+    </script>
+</body>
+
+</html>
