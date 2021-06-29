@@ -71,7 +71,7 @@ function send() {
     localStorage.setItem('sub4_int_tot', document.getElementById('sub4-int-tot').value)
     localStorage.setItem('sub5_int_tot', document.getElementById('sub5-int-tot').value)
     localStorage.setItem('sub6_int_tot', document.getElementById('sub6-int-tot').value)
-
+// 
     localStorage.setItem('lang_int', document.getElementById('lang-int').value)
     localStorage.setItem('eng_int', document.getElementById('eng-int').value)
     localStorage.setItem('sub3_int', document.getElementById('sub3-int').value)
