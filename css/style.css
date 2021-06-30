@@ -131,6 +131,9 @@ h1.res {
 .footer p {
   margin: 0;
 }
+.footer p a {
+  color: #007AF3;
+}
 
 @media (min-width: 950px) {
   img {
