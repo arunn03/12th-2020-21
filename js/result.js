@@ -6,6 +6,7 @@ window.onload = function () {
     document.querySelector(".sub4").innerHTML = "Loading..."
     document.querySelector(".sub5").innerHTML = "Loading..."
     document.querySelector(".sub6").innerHTML = "Loading..."
+    document.querySelector(".tot").innerHTML = "Loading..."
     if (queryString.length == 0) {
         if (window.location.search.split('?').length > 1) {
             var params = window.location.search.split('?')[1].split('&')
