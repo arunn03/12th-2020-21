@@ -107,6 +107,13 @@ h1.res {
   background: #E5446D;
 }
 
+.btn-cta {
+  display: flex;
+}
+.btn-cta button {
+  padding: 1em 2em;
+}
+
 .result {
   background: #E5446D;
   height: 90vh;
