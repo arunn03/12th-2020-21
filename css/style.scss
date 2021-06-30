@@ -6,6 +6,7 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 ul {
@@ -117,13 +118,8 @@ h1.res {
 
 .twelfth-sec {
     background: #E5446D;
-}
 
-.btn-cta {
-    display: flex;
-    button {
-        padding: 1em 2em;
-    }
+    
 }
 
 .result {
@@ -156,16 +152,10 @@ h1.res {
         padding: 0 2em;
     }
 
-    // body {
-    //     margin: 0 10%;
-    // }
-
     .container {
         justify-content: center;
         align-items: center;
         display: flex;
-        // place-content: space-between;
-        // padding: 2em 20em;
 
         img {
             margin-top: -.3em;
