@@ -11,12 +11,12 @@ function send() {
     let sub5_tot = parseInt(document.getElementById("sub5-tot").value)
     let sub6_tot = parseInt(document.getElementById("sub6-tot").value)
 
-    let lang = parseInt(Number(parseInt(document.getElementById("lang").value) / lang_tot * 20).toFixed(0));
-    let eng = parseInt(Number(parseInt(document.getElementById("eng").value) / eng_tot * 20).toFixed(0));
-    let sub3 = parseInt(Number(parseInt(document.getElementById("sub3").value) / sub3_tot * 20).toFixed(0));
-    let sub4 = parseInt(Number(parseInt(document.getElementById("sub4").value) / sub4_tot * 20).toFixed(0));
-    let sub5 = parseInt(Number(parseInt(document.getElementById("sub5").value) / sub5_tot * 20).toFixed(0));
-    let sub6 = parseInt(Number(parseInt(document.getElementById("sub6").value) / sub6_tot * 20).toFixed(0));
+    let lang = parseInt(Number(parseInt(document.getElementById("lang").value) / lang_tot * 20).toFixed(2));
+    let eng = parseInt(Number(parseInt(document.getElementById("eng").value) / eng_tot * 20).toFixed(2));
+    let sub3 = parseInt(Number(parseInt(document.getElementById("sub3").value) / sub3_tot * 20).toFixed(2));
+    let sub4 = parseInt(Number(parseInt(document.getElementById("sub4").value) / sub4_tot * 20).toFixed(2));
+    let sub5 = parseInt(Number(parseInt(document.getElementById("sub5").value) / sub5_tot * 20).toFixed(2));
+    let sub6 = parseInt(Number(parseInt(document.getElementById("sub6").value) / sub6_tot * 20).toFixed(2));
 
     let lang_int_tot = parseInt(document.getElementById("lang-int-tot").value)
     let eng_int_tot = parseInt(document.getElementById("eng-int-tot").value)
@@ -25,12 +25,12 @@ function send() {
     let sub5_int_tot = parseInt(document.getElementById("sub5-int-tot").value)
     let sub6_int_tot = parseInt(document.getElementById("sub6-int-tot").value)
 
-    let lang_int = Number(parseInt(document.getElementById("lang-int").value) / lang_int_tot * 30).toFixed(0)
-    let eng_int = Number(parseInt(document.getElementById("eng-int").value) / eng_int_tot * 30).toFixed(0)
-    let sub3_int = Number(parseInt(document.getElementById("sub3-int").value) / sub3_int_tot * 30).toFixed(0)
-    let sub4_int = Number(parseInt(document.getElementById("sub4-int").value) / sub4_int_tot * 30).toFixed(0)
-    let sub5_int = Number(parseInt(document.getElementById("sub5-int").value) / sub5_int_tot * 30).toFixed(0)
-    let sub6_int = Number(parseInt(document.getElementById("sub6-int").value) / sub6_int_tot * 30).toFixed(0)
+    let lang_int = Number(parseInt(document.getElementById("lang-int").value) / lang_int_tot * 30).toFixed(2)
+    let eng_int = Number(parseInt(document.getElementById("eng-int").value) / eng_int_tot * 30).toFixed(2)
+    let sub3_int = Number(parseInt(document.getElementById("sub3-int").value) / sub3_int_tot * 30).toFixed(2)
+    let sub4_int = Number(parseInt(document.getElementById("sub4-int").value) / sub4_int_tot * 30).toFixed(2)
+    let sub5_int = Number(parseInt(document.getElementById("sub5-int").value) / sub5_int_tot * 30).toFixed(2)
+    let sub6_int = Number(parseInt(document.getElementById("sub6-int").value) / sub6_int_tot * 30).toFixed(2)
 
     lang += avg10 + parseInt(lang_int)
     eng += avg10 + parseInt(eng_int)
@@ -38,6 +38,12 @@ function send() {
     sub4 += avg10 + parseInt(sub4_int)
     sub5 += avg10 + parseInt(sub5_int)
     sub6 += avg10 + parseInt(sub6_int)
+    lang = Number(lang).toFixed(2)
+    eng = Number(eng).toFixed(2)
+    sub3 = Number(sub3).toFixed(2)
+    sub4 = Number(sub4).toFixed(2)
+    sub5 = Number(sub5).toFixed(2)
+    sub6 = Number(sub6).toFixed(2)
 
     var arr = [lang, eng, sub3, sub4, sub4, sub5, sub6]
     for (let i = 0; i < 6; i++) {
