@@ -87,7 +87,7 @@ function send() {
 
 
     var url = window.location.href;
-    url = url.slice(0, url.length - 10) + "result.html?l=" + encodeURIComponent(lang) +
+    url += "result.html?l=" + encodeURIComponent(lang) +
         "&e=" + encodeURIComponent(eng) + "&3=" + encodeURIComponent(sub3) +
         "&4=" + encodeURIComponent(sub4) + "&5=" + encodeURIComponent(sub5) +
         "&6=" + encodeURIComponent(sub6);
