@@ -1,43 +1,43 @@
 function send() {
-    let avg10 = (parseInt(document.getElementById("sub1").value) +
-        parseInt(document.getElementById("sub2").value) +
-        parseInt(document.getElementById("sub3-10").value)) / 6;
-    avg10 = parseInt(Number(avg10).toFixed(2));
+    let avg10 = (parseFloat(document.getElementById("sub1").value) +
+        parseFloat(document.getElementById("sub2").value) +
+        parseFloat(document.getElementById("sub3-10").value)) / 6;
 
-    let lang_tot = parseInt(document.getElementById("lang-tot").value);
-    let eng_tot = parseInt(document.getElementById("eng-tot").value);
-    let sub3_tot = parseInt(document.getElementById("sub3-tot").value);
-    let sub4_tot = parseInt(document.getElementById("sub4-tot").value);
-    let sub5_tot = parseInt(document.getElementById("sub5-tot").value);
-    let sub6_tot = parseInt(document.getElementById("sub6-tot").value);
+    let lang_tot = parseFloat(document.getElementById("lang-tot").value);
+    let eng_tot = parseFloat(document.getElementById("eng-tot").value);
+    let sub3_tot = parseFloat(document.getElementById("sub3-tot").value);
+    let sub4_tot = parseFloat(document.getElementById("sub4-tot").value);
+    let sub5_tot = parseFloat(document.getElementById("sub5-tot").value);
+    let sub6_tot = parseFloat(document.getElementById("sub6-tot").value);
 
-    let lang = parseInt(Number(parseInt(document.getElementById("lang").value) / lang_tot * 20).toFixed(2));
-    let eng = parseInt(Number(parseInt(document.getElementById("eng").value) / eng_tot * 20).toFixed(2));
-    let sub3 = parseInt(Number(parseInt(document.getElementById("sub3").value) / sub3_tot * 20).toFixed(2));
-    let sub4 = parseInt(Number(parseInt(document.getElementById("sub4").value) / sub4_tot * 20).toFixed(2));
-    let sub5 = parseInt(Number(parseInt(document.getElementById("sub5").value) / sub5_tot * 20).toFixed(2));
-    let sub6 = parseInt(Number(parseInt(document.getElementById("sub6").value) / sub6_tot * 20).toFixed(2));
+    let lang = parseFloat(document.getElementById("lang").value) / lang_tot * 20;
+    let eng = parseFloat(document.getElementById("eng").value) / eng_tot * 20;
+    let sub3 = parseFloat(document.getElementById("sub3").value) / sub3_tot * 20;
+    let sub4 = parseFloat(document.getElementById("sub4").value) / sub4_tot * 20;
+    let sub5 = parseFloat(document.getElementById("sub5").value) / sub5_tot * 20;
+    let sub6 = parseFloat(document.getElementById("sub6").value) / sub6_tot * 20;
 
-    let lang_int_tot = parseInt(document.getElementById("lang-int-tot").value);
-    let eng_int_tot = parseInt(document.getElementById("eng-int-tot").value);
-    let sub3_int_tot = parseInt(document.getElementById("sub3-int-tot").value);
-    let sub4_int_tot = parseInt(document.getElementById("sub4-int-tot").value);
-    let sub5_int_tot = parseInt(document.getElementById("sub5-int-tot").value);
-    let sub6_int_tot = parseInt(document.getElementById("sub6-int-tot").value);
+    let lang_int_tot = parseFloat(document.getElementById("lang-int-tot").value);
+    let eng_int_tot = parseFloat(document.getElementById("eng-int-tot").value);
+    let sub3_int_tot = parseFloat(document.getElementById("sub3-int-tot").value);
+    let sub4_int_tot = parseFloat(document.getElementById("sub4-int-tot").value);
+    let sub5_int_tot = parseFloat(document.getElementById("sub5-int-tot").value);
+    let sub6_int_tot = parseFloat(document.getElementById("sub6-int-tot").value);
 
-    let lang_int = Number(parseInt(document.getElementById("lang-int").value) / lang_int_tot * 30).toFixed(2);
-    let eng_int = Number(parseInt(document.getElementById("eng-int").value) / eng_int_tot * 30).toFixed(2);
-    let sub3_int = Number(parseInt(document.getElementById("sub3-int").value) / sub3_int_tot * 30).toFixed(2);
-    let sub4_int = Number(parseInt(document.getElementById("sub4-int").value) / sub4_int_tot * 30).toFixed(2);
-    let sub5_int = Number(parseInt(document.getElementById("sub5-int").value) / sub5_int_tot * 30).toFixed(2);
-    let sub6_int = Number(parseInt(document.getElementById("sub6-int").value) / sub6_int_tot * 30).toFixed(2);
+    let lang_int = parseFloat(document.getElementById("lang-int").value) / lang_int_tot * 30;
+    let eng_int = parseFloat(document.getElementById("eng-int").value) / eng_int_tot * 30;
+    let sub3_int = parseFloat(document.getElementById("sub3-int").value) / sub3_int_tot * 30;
+    let sub4_int = parseFloat(document.getElementById("sub4-int").value) / sub4_int_tot * 30;
+    let sub5_int = parseFloat(document.getElementById("sub5-int").value) / sub5_int_tot * 30;
+    let sub6_int = parseFloat(document.getElementById("sub6-int").value) / sub6_int_tot * 30;
 
-    lang += avg10 + parseInt(lang_int);
-    eng += avg10 + parseInt(eng_int);
-    sub3 += avg10 + parseInt(sub3_int);
-    sub4 += avg10 + parseInt(sub4_int);
-    sub5 += avg10 + parseInt(sub5_int);
-    sub6 += avg10 + parseInt(sub6_int);
+    lang += avg10 + lang_int;
+    eng += avg10 + eng_int;
+    sub3 += avg10 + sub3_int;
+    sub4 += avg10 + sub4_int;
+    sub5 += avg10 + sub5_int;
+    sub6 += avg10 + sub6_int;
+
     lang = Number(lang).toFixed(2);
     eng = Number(eng).toFixed(2);
     sub3 = Number(sub3).toFixed(2);
@@ -77,7 +77,7 @@ function send() {
     localStorage.setItem('sub4_int_tot', document.getElementById('sub4-int-tot').value);
     localStorage.setItem('sub5_int_tot', document.getElementById('sub5-int-tot').value);
     localStorage.setItem('sub6_int_tot', document.getElementById('sub6-int-tot').value);
-// 
+
     localStorage.setItem('lang_int', document.getElementById('lang-int').value);
     localStorage.setItem('eng_int', document.getElementById('eng-int').value);
     localStorage.setItem('sub3_int', document.getElementById('sub3-int').value);
@@ -87,7 +87,7 @@ function send() {
 
 
     var url = window.location.href;
-    url += "result.html?l=" + encodeURIComponent(lang) +
+    url = url.slice(0, url.length - 10) + "result.html?l=" + encodeURIComponent(lang) +
         "&e=" + encodeURIComponent(eng) + "&3=" + encodeURIComponent(sub3) +
         "&4=" + encodeURIComponent(sub4) + "&5=" + encodeURIComponent(sub5) +
         "&6=" + encodeURIComponent(sub6);
