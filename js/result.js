@@ -28,5 +28,7 @@ function calculate() {
     document.querySelector(".sub4").innerHTML = queryString["4"]
     document.querySelector(".sub5").innerHTML = queryString["5"]
     document.querySelector(".sub6").innerHTML = queryString["6"]
-    document.querySelector(".tot").innerHTML = parseInt(queryString["l"]) + parseInt(queryString["e"]) + parseInt(queryString["3"]) + parseInt(queryString["4"]) + parseInt(queryString["5"]) + parseInt(queryString["6"]) 
+    document.querySelector(".tot").innerHTML = parseFloat(queryString["6"]) + parseFloat(queryString["5"]) +
+        parseFloat(queryString["4"]) + parseFloat(queryString["3"]) +
+        parseFloat(queryString["e"]) + parseFloat(queryString["l"])
 }
